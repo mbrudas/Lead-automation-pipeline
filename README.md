@@ -41,6 +41,8 @@ Designed for agencies, consultants, and teams looking to streamline client acqui
 
 This project is shared for **educational and portfolio purposes only** under the **Creative Commons BY-NC 4.0 license**.
 
+> ⚠️ This project is for demonstration purposes only. Commercial use is not allowed without written permission. © 2025 Maria Brudas – All rights reserved.
+
 > 📌 For commercial use or custom implementation, please contact the author.
 
 ## 🔐 Disclaimer
