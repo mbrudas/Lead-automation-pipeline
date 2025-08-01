@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura Automatización de Leads</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        .phase {
+            margin: 40px 0;
+            padding: 30px;
+            border-left: 4px solid #007bff;
+            background: #f8f9fa;
+            border-radius: 0 15px 15px 0;
+        }
+        .phase-title {
+            color: #007bff;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .phase-components {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .component {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 180px;
+        }
+        .component-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .component-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .component-desc {
+            font-size: 12px;
+            color: #6c757d;
+        }
+        .arrow {
+            font-size: 32px;
+            color: #007bff;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        .data-source { background: linear-gradient(145deg, #ff6b6b, #ee5a52); color: white; }
+        .processing { background: linear-gradient(145deg, #4ecdc4, #44a08d); color: white; }
+        .storage { background: linear-gradient(145deg, #45b7d1, #3498db); color: white; }
+        .automation { background: linear-gradient(145deg, #96ceb4, #86c091); color: white; }
+        .integration { background: linear-gradient(145deg, #feca57, #ff9ff3); color: white; }
+        .crm { background: linear-gradient(145deg, #ff7675, #fd79a8); color: white; }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .metric {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .metric-label {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        @media (max-width: 768px) {
+            .phase-components { flex-direction: column; }
+            .arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🚀 Arquitectura del Sistema de Automatización de Leads</h1>
+
+        <div class="phase">
+            <div class="phase-title">Fase 1: Procesamiento de Datos</div>
+            <div class="phase-components">
+                <div class="component data-source">
+                    <span class="component-icon">📊</span>
+                    <div class="component-title">Dataset Original</div>
+                    <div class="component-desc">1,000 registros (Datablist)</div>
+                </div>
+                <span class="arrow">→</span>
+                <div class="component processing">
+                    <span class="component-icon">🐍</span>
+                    <div class="component-title">Python + Pandas</div>
+                    <div class="component-desc">Limpieza de datos históricos, validación de emails, phones, fechas</div>
+                </div>
+                <span class="arrow">→</span>
+                <div class="component storage">
+                    <span class="component-icon">📋</span>
+                    <div class="component-title">Google Sheet Limpio</div>
+                    <div class="component-desc">1,000 registros limpiados y migrados (CSV → Sheet)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-title">Fase 2: Captura Automatizada</div>
+            <div class="phase-components">
+                <div class="component automation">
+                    <span class="component-icon">📝</span>
+                    <div class="component-title">Google Forms</div>
+                    <div class="component-desc">Captura leads nuevos + validaciones de formato</div>
+                </div>
+                <span class="arrow">→</span>
+                <div class="component processing">
+                    <span class="component-icon">⚡</span>
+                    <div class="component-title">Google Apps Script</div>
+                    <div class="component-desc">Trigger automático de nuevo contacto</div>
+                </div>
+                <span class="arrow">→</span>
+                <div class="component storage">
+                    <span class="component-icon">📊</span>
+                    <div class="component-title">Google Sheet</div>
+                    <div class="component-desc">Dataset final centralizado</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="phase">
+            <div class="phase-title">Fase 3: Integración CRM</div>
+            <div class="phase-components">
+                <div class="component storage">
+                    <span class="component-icon">📊</span>
+                    <div class="component-title">Google Sheet</div>
+                    <div class="component-desc">Datos históricos + nuevos</div>
+                </div>
+                <span class="arrow">→</span>
+                <div class="component integration">
+                    <span class="component-icon">🔄</span>
+                    <div class="component-title">HubSpot API v3</div>
+                    <div class="component-desc">Integración RESTful JSON</div>
+                </div>
+                <span class="arrow">→</span>
+                <div class="component crm">
+                    <span class="component-icon">💼</span>
+                    <div class="component-title">HubSpot CRM</div>
+                    <div class="component-desc">Base de contactos en tiempo real</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">98.7%</div>
+                <div class="metric-label">Precisión de Limpieza</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value"><30s</div>
+                <div class="metric-label">Tiempo Sincronización HubSpot</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Migración de Históricos</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">91%</div>
+                <div class="metric-label">Ahorro de Tiempo Operativo</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
