@@ -1,0 +1,18 @@
+# Python
+*.pyc
+__pycache__/
+.env
+
+# Google credentials
+token.json
+credentials.json
+
+# Datos sensibles o temporales
+*.csv
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
